@@ -1,29 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void Buscar_Nome() {
 
 }
-
 void Mostrar_Categoria() {
 
 }
-
 void Ordenar_Menor_Preco() {
 
 }
-
 void Mostrar_Prod_em_Estoque() {
 
 }
-
 struct Produtos {
     char name[50];
     int codigo_produto;
     float price;
     int quantidade;
 };
-
 int main(){ 
 
     struct Produtos Produto;
@@ -31,14 +27,16 @@ int main(){
     char user[256];
     char password[256];
     int menu;
+    char opcao[20];
 
     //produtos[] //definir arrary de struct com os produtos
     // usar o sizeof[] parar definir o tamanho total dos vetores, lembrar de sempre que adicionar algum vetor novo, rodar o sizeof de novo
 
     printf("Você é cliente ou administrador?\n");
-    scanf("%s", user);
+    scanf(" %19[^\n]", opcao);
+    getchar();
 
-    if(user == "cliente"){
+    (strcmp(password, "admin") == 0){
             printf("\nEscolha a opção desejada:\n");
             printf("1 - Buscar produto pelo nome\n");
             printf("2 - Mostrar as categorias de produtos\n");
